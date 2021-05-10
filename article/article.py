@@ -5,7 +5,14 @@ class Article():
         self.url  = url
         self.summary = summary
 
-    
+    def get_name(self):
+        return self.name
+
+    def get_summary(self):
+        return self.summary
+
+    def get_url(self):
+        return self.url
 
     def get_content(self):
         raise Exception("Not implemented")

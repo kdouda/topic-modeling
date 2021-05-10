@@ -4,18 +4,29 @@ from bs4 import BeautifulSoup
 
 class NovinkyArticle(Article):
 
+    def __init__(self, name, url, summary = ''):
+        self.name = name
+        self.url  = url
+        self.summary = summary
+        self.content = ""
+
     def get_content(self):
-        scraper = NovinkyScaper(self.url)
+        if self.content:
+            return self.content
+
+        scraper = NovinkyScraper(self.url)
 
         text = ""
 
         for paragraph in scraper.get_next_paragraph():
             text = text + paragraph + "\n"
 
+        self.content = text
+
         return text
 
 
-class NovinkyScaper():
+class NovinkyScraper():
 
     def __init__(self, url):
         self.url = url
