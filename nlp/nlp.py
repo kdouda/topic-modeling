@@ -13,8 +13,6 @@ class NLP():
         result = self.morpho.analyze(token, self.morpho.GUESSER, lemmas)
 
         for lemma in lemmas:
-            print(lemma.lemma)
-            print(lemma.tag)
             candidate = lemma.lemma.split('_')[0]
             candidate = candidate.split('-')[0]
             candidate = candidate.split('`')[0]

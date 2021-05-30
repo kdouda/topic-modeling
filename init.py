@@ -1,4 +1,4 @@
-from providers.novinkyarticleprovider import NovinkyArticleProvider
+from providers.novinkyjsonarticleprovider import NovinkyJsonArticleProvider
 from nlp.nlp import NLP
 from nlp.sentencesplitter import SentenceSplitter
 from nlp.tokenizer import SentenceTokenizer
@@ -14,7 +14,12 @@ tokenizer = SentenceTokenizer()
 splitter = SentenceSplitter()
 stopwords = StopwordsRemover()
 
-provider = NovinkyArticleProvider()
+provider = NovinkyJsonArticleProvider()
+
+for article in provider.get_next_article():
+    print(article)
+
+quit()
 
 i = 0
 
@@ -53,12 +58,6 @@ for article in provider.get_next_article():
                 
                 if lemma != '' and len(lemma) > 3:
                     doc.append(lemma)
-
-    #for (word, occurence) in tf.items():
-    #    if occurence == 1:
-    #        doc.remove(word)
-    #print(doc)
-    #break
 
     docs.append(doc)
     articleurls.append(article.get_url())

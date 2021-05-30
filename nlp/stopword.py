@@ -29,7 +29,9 @@ class StopwordsRemover():
             "vámi","vás","váš","více","však","všechen","všechno","všichni","vůbec","vždy","z","za","zatímco","zač","zda","zde","ze","zpet","zpravy","zprávy",
             "zpět","čau","či","článek","článku","články","čtrnáct","čtyři","šest","šestnáct","že",
             # added by author
-            " ", "který", "člověk", "mít", "muset", "všechen", "on", "ona", "ono", "ten", "ta", "to", "dít", "člověk", "procento", "velmi", "foto"
+            " ", "který", "člověk", "mít", "muset", "všechen", "on", "ona", "ono", "ten", "ta", "to", "dít", "člověk", "procento", "velmi", "foto",
+            # should have been added, but wasn't
+            "říci", "uvést", "moci" 
         ]
 
         self.stopwords = frozenset(self.stopwords)

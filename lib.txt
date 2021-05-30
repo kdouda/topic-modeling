@@ -4,3 +4,5 @@ pip install beautifulsoup4
 pip install ufal.morphodita
 pip install wordcloud
 pip install gensim 
+pip install pymongo
+pip install dnspython

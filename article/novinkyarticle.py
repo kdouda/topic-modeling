@@ -25,6 +25,14 @@ class NovinkyArticle(Article):
 
         return text
 
+class NovinkyArticleJson(NovinkyArticle):
+
+    def set_id(self, id):
+        self.id = id
+
+    def get_id(self):
+        return self.id
+
 
 class NovinkyScraper():
 
