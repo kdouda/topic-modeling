@@ -138,3 +138,5 @@ dmypy.json
 cython_debug/
 
 czech-morfflex-pdt-161115/*
+
+test/*
